@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node build/index.js",
-    "dev": "nodemon -x ts-node index.ts",
-    "postinstall": "npm run build"
+    "start": "node build/index.js",
+    "build": "tsc",
+    "dev": "nodemon -x ts-node index.ts"
   },
   "repository": {
     "type": "git",

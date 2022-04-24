@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Lista de telefones",
   "main": "source/server.ts",
+  "engines": {
+    "node": "16.14.2"
+  },
   "scripts": {
     "start": "node source/server.ts",
     "build": "rm -rf build/ && prettier --write source/ && tsc",

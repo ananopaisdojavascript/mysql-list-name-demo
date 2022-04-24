@@ -38,6 +38,15 @@ router.use((req, res, next) => {
     next();
 });
 
+router.get('/names', (req, res, next) => {
+    res.send("Hey!!!!!")
+})
+
+router.get('/names/:id', (req, res, next) => {
+    const id = req.params.id;
+    res.send(`Hey ${id}!`)
+});
+
 /** Tratamento de erros */
 router.use((req, res, next) => {
     const error = new Error('Not found');

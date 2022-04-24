@@ -1,8 +1,7 @@
-import mysql, { createConnection } from "mysql";
+import mysql from "mysql";
 import express, { Request, Response } from 'express';
 import bodyParser from "body-parser";
-import * as dotenv from "dotenv";
-dotenv.config();
+require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT
@@ -12,6 +11,11 @@ const db = mysql.createConnection({
     user: process.env.DB_USER,
     password: process.env.DB_PWD,
     database: process.env.DB_NAME
+});
+
+db.connect(function (err) {
+    if (err) throw err;
+    console.log("Até que enfim conectou!!!!!");
 });
 
 app.use(bodyParser.urlencoded({ extended: false }));

@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 
 app.get('/names', (request: Request, response: Response) => {
     const query = 'SELECT * FROM nameList';
-    db.query(query, (error, results, fields) => {
+    db.query(query, (error, results) => {
         if (error) throw error;
         response.send(JSON.stringify(results));
     })
@@ -29,7 +29,7 @@ app.get('/names', (request: Request, response: Response) => {
 app.get('/names/:id', (request: Request, response: Response) => {
     const id = request.params.id;
     const query = `SELECT * FROM nameList WHERE id = ${id}`;
-    db.query(query, (error, results, fields) => {
+    db.query(query, (error, results) => {
         if (error) throw error;
         response.send(JSON.stringify(results));
     })

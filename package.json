@@ -2,15 +2,15 @@
   "name": "mysql-list-name-demo",
   "version": "1.0.0",
   "description": "Lista de telefones",
-  "main": "source/server.ts",
+  "main": "build/server.js",
   "engines": {
     "node": "16.14.2"
   },
   "scripts": {
     "start": "node source/server.ts",
-    "build": "rm -rf build/ && prettier --write source/ && tsc",
+    "build": "rm -rf build/ && prettier --write source/ && tsc && ng build",
     "dev": "nodemon",
-    "postinstall": "tsc"
+    "heroku-postbuild": "ng build --prod"
   },
   "repository": {
     "type": "git",

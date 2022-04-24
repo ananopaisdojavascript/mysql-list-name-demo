@@ -1,16 +1,11 @@
 {
   "name": "mysql-list-name-demo",
   "version": "1.0.0",
-  "description": "Lista de telefones",
-  "main": "build/server.js",
-  "engines": {
-    "node": "16.14.2"
-  },
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "node source/server.ts",
-    "build": "rm -rf build/ && prettier --write source/ && tsc && ng build",
-    "dev": "nodemon",
-    "heroku-postbuild": "ng build --prod"
+    "start": "tsc && node build/index.js",
+    "dev": "nodemon -x ts-node index.ts"
   },
   "repository": {
     "type": "git",
@@ -33,10 +28,8 @@
     "express": "^4.17.3",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.15",
+    "prettier": "^2.6.2",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
-  },
-  "dependencies": {
-    "prettier": "^2.6.2"
   }
 }

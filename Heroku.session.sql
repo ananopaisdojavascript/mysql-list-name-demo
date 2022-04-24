@@ -1,0 +1,1 @@
+ALTER USER 'b05424696707cc' IDENTIFIED WITH mysql_native_password BY '581bcc43' flush priviledges;

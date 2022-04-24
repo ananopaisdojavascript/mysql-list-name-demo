@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node source/server.ts",
     "build": "rm -rf build/ && prettier --write source/ && tsc",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "postinstall": "tsc"
   },
   "repository": {
     "type": "git",
